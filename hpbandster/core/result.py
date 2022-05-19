@@ -131,6 +131,7 @@ class json_result_logger(object):
 			with open(self.config_fn, 'a') as fh:
 				fh.write(json.dumps([job.id, job.kwargs['config'], {}]))
 				fh.write('\n')
+
 		with open(self.results_fn, 'a') as fh:
 			fh.write(json.dumps([job.id, job.kwargs['budget'], job.timestamps, job.result, job.exception]))
 			fh.write("\n")

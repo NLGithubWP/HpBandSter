@@ -102,7 +102,7 @@ class PyTorchWorker(Worker):
 		It is trained on the MNIST dataset.
 		The input parameter "config" (dictionary) contains the sampled configurations passed by the bohb optimizer
 		"""
-
+		print("---worker id = ", self.worker_id, " run config = ", config, " with budget = ", budget)
 		# device = torch.device('cpu')
 		model = MNISTConvNet(num_conv_layers=config['num_conv_layers'],
 							num_filters_1=config['num_filters_1'],
